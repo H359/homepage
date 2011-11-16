@@ -1,0 +1,14 @@
+.clients .prosvet.bw { background:  url(/images/sprites.png) no-repeat 0px -474px; width: 250px; height: 48px; }
+.clients .bondst { background:  url(/images/sprites.png) no-repeat 0px 0px; width: 120px; height: 120px; }
+.clients .stroiaudit { background:  url(/images/sprites.png) no-repeat -159px -120px; width: 77px; height: 75px; }
+.clients .stroiaudit.bw { background:  url(/images/sprites.png) no-repeat -159px -223px; width: 77px; height: 75px; }
+.clients .svetozone.bw { background:  url(/images/sprites.png) no-repeat 0px -545px; width: 195px; height: 23px; }
+.github { background:  url(/images/sprites.png) no-repeat -130px -326px; width: 32px; height: 32px; }
+.clients .bondst.bw { background:  url(/images/sprites.png) no-repeat -120px 0px; width: 120px; height: 120px; }
+.clients .prosvet { background:  url(/images/sprites.png) no-repeat 0px -426px; width: 250px; height: 48px; }
+.clients .linguamaster.bw { background:  url(/images/sprites.png) no-repeat 0px -376px; width: 130px; height: 50px; }
+.clients .linguamaster { background:  url(/images/sprites.png) no-repeat 0px -326px; width: 130px; height: 50px; }
+.clients ._1btl.bw { background:  url(/images/sprites.png) no-repeat 0px -223px; width: 159px; height: 103px; }
+.clients ._1btl { background:  url(/images/sprites.png) no-repeat 0px -120px; width: 159px; height: 103px; }
+.clients .svetozone { background:  url(/images/sprites.png) no-repeat 0px -522px; width: 195px; height: 23px; }
+.sprite_img { height: 120px !important; }

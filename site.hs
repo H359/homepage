@@ -11,8 +11,15 @@ h359WriterOptions = defaultHakyllWriterOptions {
     writerHtml5 = True
 }
 
+defaultPageCompiler = pageCompilerWith defaultHakyllParserState h359WriterOptions
+
+config :: HakyllConfiguration
+config = defaultHakyllConfiguration {
+ deployCommand = "rsync --checksum -ave ssh _site/* h359.ru:h359.ru"
+}
+
 main :: IO() 
-main = hakyll $ do
+main = hakyllWith config $ do
  -- Copy images
  match "images/*" $ do
     route idRoute
@@ -34,7 +41,7 @@ main = hakyll $ do
  -- clients
  match "clients/*" $ do
     route $ setExtension "html"
-    compile $ pageCompilerWith defaultHakyllParserState h359WriterOptions
+    compile $ defaultPageCompiler
         >>> applyTemplateCompiler "templates/default.html"
         >>> relativizeUrlsCompiler
  --
@@ -46,7 +53,7 @@ main = hakyll $ do
  -- index.html
  match "index.markdown" $ do
     route $ setExtension "html"
-    compile $ pageCompilerWith defaultHakyllParserState h359WriterOptions
+    compile $ defaultPageCompiler
         >>> setFieldPageList id "templates/clientitem.html" "clients" "clients/*"
         >>> applyTemplateCompiler "templates/home.html"
         >>> applyTemplateCompiler "templates/default.html"
